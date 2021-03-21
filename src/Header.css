@@ -1,0 +1,23 @@
+header{
+    height: 50px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.Title{
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Reset_button{
+    position: absolute;
+    left: 10px;
+    color: rgb(255, 145, 0);
+    top: 58px;
+    background-color: gray;
+}
