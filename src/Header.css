@@ -12,12 +12,13 @@ header{
     padding: 10px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.Reset_button{
-    position: absolute;
-    left: 10px;
-    color: rgb(255, 145, 0);
-    top: 58px;
-    background-color: gray;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../Header.css';
+import '../buttom_style.css';
 
 class Header extends React.Component {
     render() {
@@ -8,12 +9,12 @@ class Header extends React.Component {
             <header>
                 <div className="Title">Memory Game</div>
                 <div>
-                    <button className="Reset_button">
+                    <button className="raise" onClick={this.props.resetGame}>
                         Reiniciar
                     </button>
                 </div>
                 <div className="Title">
-                    Intentos:
+                    Intentos: {this.props.tryNumber}
                 </div>
             </header>
         );
