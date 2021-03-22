@@ -36,6 +36,7 @@ class StartApp extends React.Component {
             selectedCards = {this.state.selectedCards}
             selectCard = {(card) => this.selectCard(card)}
           />
+          
         </div>
     );
   }
@@ -76,6 +77,7 @@ class StartApp extends React.Component {
         });
       }
 
+      this.victory(baraja);
       this.setState({
         selectedCards: [],
         baraja,
@@ -88,7 +90,7 @@ class StartApp extends React.Component {
 
   victory(baraja){
     if(baraja.filter((card) => !card.guessed).length === 0){
-      alert('You win in only ${this.state.tryNumber} movements');
+      alert(`You win in only ${this.state.tryNumber} movements`);
     }
   }
 
