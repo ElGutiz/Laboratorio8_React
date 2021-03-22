@@ -6,7 +6,6 @@ import contruirBaraja from '../utils/Baraja';
 
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
 const getInitialState = () => {
@@ -14,7 +13,8 @@ const getInitialState = () => {
   return  {
     baraja,
     selectedCards: [],
-    comparing: false
+    comparing: false,
+    tryNumber: 0
   };
 }
 
@@ -27,7 +27,10 @@ class StartApp extends React.Component {
   render() {
     return (
         <div className = "startName">
-          <Header />
+          <Header 
+            tryNumber = {this.state.tryNumber}
+            resetGame = {() => this.resetGame()}
+          />
           <Tablero 
             baraja = {this.state.baraja}
             selectedCards = {this.state.selectedCards}
@@ -76,10 +79,23 @@ class StartApp extends React.Component {
       this.setState({
         selectedCards: [],
         baraja,
-        comparing: false
+        comparing: false,
+        tryNumber: this.state.tryNumber + 1
       })
 
     }, 1000)
+  }
+
+  victory(baraja){
+    if(baraja.filter((card) => !card.guessed).length === 0){
+      alert('You win in only ${this.state.tryNumber} movements');
+    }
+  }
+
+  resetGame() {
+    this.setState(
+      getInitialState()
+    )
   }
 
 }
