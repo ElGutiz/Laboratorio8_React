@@ -3,6 +3,7 @@ import React from 'react';
 import '../Tablero.css';
 
 import Carta from './Carta'
+import BackCard from "./Back_card";
 
 class Tablero extends React.Component {
     render() {
@@ -16,9 +17,9 @@ class Tablero extends React.Component {
                                 key = {index}
                                 icon ={card.icon}
                                 beingCompare = {beingCompare}
-                                selectCards = {() => this.props.selectCard(card)}
+                                selectCard = {() => this.props.selectCard(card)}
                                 guessed = {card.guessed}
-                           />
+                           />;
                         })
                 }
             </div>
