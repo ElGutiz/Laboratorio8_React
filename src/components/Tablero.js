@@ -6,11 +6,20 @@ import Carta from './Carta'
 
 class Tablero extends React.Component {
     render() {
-        const cartas = [1,2,3,4,5];
         return (
             <div className="tablero">
                 {
-                    cartas.map((carta) => <Carta></Carta>)
+                    this.props.baraja
+                        .map((card, index) => {
+                            const beingCompare = this.props.selectedCards.indexOf(card) > -1;
+                            return <Carta 
+                                key = {index}
+                                icon ={card.icon}
+                                beingCompare = {beingCompare}
+                                selectCards = {() => this.props.selectCard(card)}
+                                guessed = {card.guessed}
+                           />
+                        })
                 }
             </div>
         );
