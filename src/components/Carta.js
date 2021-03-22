@@ -22,11 +22,11 @@ class Carta extends React.Component {
     render() {
         return (
             <div className="carta">
-                <FlipCard isFlipped={this.state.isFlipped} flipDirection="vertical">
-                    <FrontCard handleClick={this.handleClick}>
+                <FlipCard isFlipped={this.props.beingCompare || this.props.guessed} flipDirection="vertical">
+                    <FrontCard handleClick={this.props.selectCard}>
                         
                     </FrontCard>
-                    <BackCard handleClick={this.handleClick}>
+                    <BackCard handleClick={this.props.selectCard}>
                         
                     </BackCard>
                 </FlipCard>
