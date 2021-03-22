@@ -15,7 +15,7 @@ class Tablero extends React.Component {
                             const beingCompare = this.props.selectedCards.indexOf(card) > -1;
                             return <Carta 
                                 key = {index}
-                                icon ={card.icon}
+                                icon = {card.icon}
                                 beingCompare = {beingCompare}
                                 selectCard = {() => this.props.selectCard(card)}
                                 guessed = {card.guessed}

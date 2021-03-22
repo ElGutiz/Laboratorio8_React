@@ -26,7 +26,7 @@ class Carta extends React.Component {
                     <FrontCard handleClick={this.props.selectCard}>
                         
                     </FrontCard>
-                    <BackCard handleClick={this.props.selectCard}>
+                    <BackCard handleClick={this.props.selectCard} icon = {this.props.icon}>
                         
                     </BackCard>
                 </FlipCard>

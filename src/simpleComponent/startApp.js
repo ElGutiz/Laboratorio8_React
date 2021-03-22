@@ -4,10 +4,6 @@ import Header from '../components/Header';
 import Tablero from '../components/Tablero';
 import contruirBaraja from '../utils/Baraja';
 
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/brands';
-
 const getInitialState = () => {
   const baraja = contruirBaraja();
   return  {

@@ -1,16 +1,16 @@
 import shuffle from 'lodash.shuffle';
-import FontAwesomeClasses from './fontAwesomeClasses';
+import Iconos from './fontAwesomeClasses';
 
 const CARDS_NUMBER = 20;
 
 export default () => {
-    const fontAwesomeClasses = FontAwesomeClasses();
+    const Iconos2 = Iconos();
     let cards = [];
 
     while (cards.length < CARDS_NUMBER){
-        const index = Math.floor(Math.random() * fontAwesomeClasses.length);
+        const index = Math.floor(Math.random() * Iconos2.length);
         const card = {
-            icon: fontAwesomeClasses.splice(index, 1)[0],
+            icon: Iconos2.splice(index, 1)[0],
             guessed: false
         };
 
