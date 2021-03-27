@@ -7,6 +7,6 @@ import './index.css';
 import StartApp from './simpleComponent/startApp';
 
 ReactDOM.render(
-    <StartApp />, 
-    document.getElementById('root')
+  <StartApp />,
+  document.getElementById('root'),
 );

@@ -3,11 +3,16 @@ import React from 'react';
 import '../Carta.css';
 
 class FrontCard extends React.Component {
-    render() {
-        return (
-            <div className="portrait" onClick={this.props.handleClick}></div>
-        );
-    }
-};
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+
+  render() {
+    return (
+      <div className="portrait" onClick={this.props.handleClick} role="button" aria-label=" "/>
+    );
+  }
+}
 
 export default FrontCard;
