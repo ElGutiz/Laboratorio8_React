@@ -1,5 +1,5 @@
-import shuffle from 'lodash.shuffle';
-import Iconos from './fontAwesomeClasses';
+import shuffle from "lodash.shuffle";
+import Iconos from "./fontAwesomeClasses";
 
 const CARDS_NUMBER = 20;
 

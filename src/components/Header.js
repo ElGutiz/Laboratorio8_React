@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import '../Header.css';
-import '../buttom_style.css';
+import "../Header.css";
+import "../buttom_style.css";
 
 class Header extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Header extends React.Component {
         </div>
         <div className="Title">
           Intentos:
-          {' '}
+          {" "}
           {this.props.tryNumber}
         </div>
       </header>

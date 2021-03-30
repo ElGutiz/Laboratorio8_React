@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import '../Tablero.css';
+import "../Tablero.css";
 
-import Carta from './Carta';
+import Carta from "./Carta";
 
 class Tablero extends React.Component {
   constructor(props) {

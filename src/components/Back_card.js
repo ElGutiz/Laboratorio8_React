@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import '../Carta.css';
+import "../Carta.css";
 
 class BackCard extends React.Component {
   constructor(props) {

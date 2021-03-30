@@ -1,9 +1,9 @@
-import React from 'react';
-import FlipCard from 'react-card-flip';
-import FrontCard from './Front_card';
-import BackCard from './Back_card';
+import React from "react";
+import FlipCard from "react-card-flip";
+import FrontCard from "./Front_card";
+import BackCard from "./Back_card";
 
-import '../Carta.css';
+import "../Carta.css";
 
 class Carta extends React.Component {
   constructor() {

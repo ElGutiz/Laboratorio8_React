@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import Header from '../components/Header';
-import Tablero from '../components/Tablero';
-import contruirBaraja from '../utils/Baraja';
+import Header from "../components/Header";
+import Tablero from "../components/Tablero";
+import contruirBaraja from "../utils/Baraja";
 
 const getInitialState = () => {
   const baraja = contruirBaraja();
@@ -21,17 +21,18 @@ class StartApp extends React.Component {
   }
 
   selectCard(card) {
+    const { comparing, selectedCards } = this.state;
     if (
-      this.state.comparing
-      || this.state.selectedCards.indexOf(card) > -1
+      comparing
+      || selectedCards.indexOf(card) > -1
       || card.guessed
     ) {
       return;
     }
 
-    const selectedCards = [...this.state.selectedCards, card];
+    const selectedCardsUpdated = [...selectedCards, card];
     this.setState({
-      selectedCards,
+      selectedCards: selectedCardsUpdated,
     });
 
     if (selectedCards.length === 2) {
@@ -57,18 +58,20 @@ class StartApp extends React.Component {
       }
 
       this.victory(baraja);
+      const { tryNumber } = this.state;
       this.setState({
         selectedCards: [],
         baraja,
         comparing: false,
-        tryNumber: this.state.tryNumber + 1,
+        tryNumber: tryNumber + 1,
       });
     }, 1000);
   }
 
   victory(baraja) {
+    const { tryNumber } = this.state;
     if (baraja.filter((card) => !card.guessed).length === 0) {
-      alert(`You win in only ${this.state.tryNumber} movements`);
+      alert(`You win in only ${tryNumber} movements`);
     }
   }
 
@@ -79,15 +82,16 @@ class StartApp extends React.Component {
   }
 
   render() {
+    const { tryNumber, selectedCards, baraja } = this.state;
     return (
       <div className="startName">
         <Header
-          tryNumber={this.state.tryNumber}
+          tryNumber={tryNumber}
           resetGame={() => this.resetGame()}
         />
         <Tablero
-          baraja={this.state.baraja}
-          selectedCards={this.state.selectedCards}
+          baraja={baraja}
+          selectedCards={selectedCards}
           selectCard={(card) => this.selectCard(card)}
         />
 
